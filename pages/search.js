@@ -5,6 +5,7 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 import { format } from 'date-fns'
 import InfoCard from '../components/InfoCard'
+import Map from '../components/Map'
 
 function search({ searchResults }) {
 	const router = useRouter()
@@ -49,6 +50,10 @@ function search({ searchResults }) {
 							)
 						)}
 					</div>
+				</section>
+
+				<section className='hidden xl:inline-flex xl:min-w-[600px]'>
+					<Map searchResults={searchResults} className='flex-grow' />
 				</section>
 			</main>
 
